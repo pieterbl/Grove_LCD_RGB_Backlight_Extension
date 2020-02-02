@@ -2,6 +2,8 @@
 #ifndef __GROVE_LCD_RGB_BACKLIGHT_EXTENSION_HPP__
 #define __GROVE_LCD_RGB_BACKLIGHT_EXTENSION_HPP__
 
+#include <WString.h>
+
 /*
  * Simple Color class.
  */
@@ -14,6 +16,25 @@ private:
 public:
 	inline Color(unsigned char r, unsigned char g, unsigned char b) :
 			_red(r), _green(g), _blue(b) {
+	}
+
+	inline const String toString() const {
+		String str = "{";
+
+		str += "red(";
+		str += _red;
+		str += "),";
+
+		str += "green(";
+		str += _green;
+		str += "),";
+
+		str += "blue(";
+		str += _blue;
+		str += ")";
+
+		str += "}";
+		return str;
 	}
 
 	inline void set(unsigned char r, unsigned char g, unsigned char b) {
