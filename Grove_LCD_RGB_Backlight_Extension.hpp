@@ -1,4 +1,3 @@
-
 #ifndef __GROVE_LCD_RGB_BACKLIGHT_EXTENSION_HPP__
 #define __GROVE_LCD_RGB_BACKLIGHT_EXTENSION_HPP__
 
@@ -97,8 +96,8 @@ public:
 	}
 
 	// convenience method
-	int increaseAndSlideColor(unsigned char r, unsigned char g,
-			unsigned char b, Color &color) {
+	int increaseAndSlideColor(unsigned char r, unsigned char g, unsigned char b,
+			Color &color) {
 
 		color.increase(r, g, b);
 		slideColor(color);
@@ -106,8 +105,8 @@ public:
 	}
 
 	// convenience method
-	int decreaseAndSlideColor(unsigned char r, unsigned char g,
-			unsigned char b, Color &color) {
+	int decreaseAndSlideColor(unsigned char r, unsigned char g, unsigned char b,
+			Color &color) {
 
 		color.decrease(r, g, b);
 		slideColor(color);

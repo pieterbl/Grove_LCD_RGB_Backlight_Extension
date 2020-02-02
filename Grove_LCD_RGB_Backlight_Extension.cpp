@@ -1,4 +1,3 @@
-
 #include "Grove_LCD_RGB_Backlight_Extension.hpp"
 
 const Color Colors::Red(255, 0, 0);
