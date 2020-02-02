@@ -97,19 +97,21 @@ public:
 	}
 
 	// convenience method
-	void increaseAndSlideColor(unsigned char r, unsigned char g,
+	int increaseAndSlideColor(unsigned char r, unsigned char g,
 			unsigned char b, Color &color) {
 
 		color.increase(r, g, b);
 		slideColor(color);
+		return 1;
 	}
 
 	// convenience method
-	void decreaseAndSlideColor(unsigned char r, unsigned char g,
+	int decreaseAndSlideColor(unsigned char r, unsigned char g,
 			unsigned char b, Color &color) {
 
 		color.decrease(r, g, b);
 		slideColor(color);
+		return 1;
 	}
 
 	virtual void slideColor(const Color &color) = 0;
