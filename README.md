@@ -1,6 +1,9 @@
 # Grove\_LCD\_RGB\_Backlight\_Extension
 Extension for: Seeedstudio, Grove - LCD RGB Backlight
 
+# Development
+For developent I use the Sloeber IDE (<http://eclipse.baeyens.it/index.shtml>)
+
 # Required Libraries
 This library requires:
 - <https://github.com/pieterbl/Grove_LCD_RGB_Backlight>
@@ -8,4 +11,5 @@ This library requires:
   - none of the performed changes, modifies the original library behavior
   - some of the changes fix C++ compiler warnings
   - the other changes were style issues and some typos that were fixed
-
+- Standard Arduino "Wire" library
+  - \<Wire.h\> is required by "rgb\_lcd.cpp" from the Grove\_LCD\_RGB\_Backlight library
