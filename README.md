@@ -1,8 +1,11 @@
 # Grove\_LCD\_RGB\_Backlight\_Extension
 Extension for: Seeedstudio, Grove - LCD RGB Backlight
 
+# License
+License information can be found here <./LICENSE.md>.
+
 # Development
-For developent I use the Sloeber IDE (<http://eclipse.baeyens.it/index.shtml>)
+For developent I use the Sloeber IDE (<https://eclipse.baeyens.it>).
 
 # Required Libraries
 This library requires:
