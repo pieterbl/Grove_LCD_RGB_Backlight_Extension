@@ -3,7 +3,7 @@
 Copyright (c) 2020 Pieter Bloemendaal (<https://github.com/pieterbl>)
 
 Project Grove\_LCD\_RGB\_Backlight\_Extension 
-(<https://github.com/pieterbl/Grove\_LCD\_RGB\_Backlight\_Extension>)
+(<https://github.com/pieterbl/Grove_LCD_RGB_Backlight_Extension>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
