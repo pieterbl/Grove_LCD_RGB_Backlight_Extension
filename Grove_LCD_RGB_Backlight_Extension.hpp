@@ -121,24 +121,6 @@ public:
 	virtual ~ColorSliderClient() {
 	}
 
-	// convenience method
-	int increaseAndSlideColor(unsigned char r, unsigned char g, unsigned char b,
-			Color &color) {
-
-		color.increase(r, g, b);
-		slideColor(color);
-		return 1;
-	}
-
-	// convenience method
-	int decreaseAndSlideColor(unsigned char r, unsigned char g, unsigned char b,
-			Color &color) {
-
-		color.decrease(r, g, b);
-		slideColor(color);
-		return 1;
-	}
-
 	virtual void slideColor(const Color &color) = 0;
 };
 
@@ -169,7 +151,7 @@ public:
 	 * The "wait a bit" is "msStepSize" long.
 	 */
 	void delayAndSlide(ColorSliderClient &client, unsigned long ms,
-			unsigned long msStepSize = 5) {
+			unsigned long msStepSize = 10) {
 
 		for (unsigned long i = 0; i < ms; i += msStepSize) {
 			slide(client);
@@ -256,11 +238,11 @@ private:
 	int slideRed(ColorSliderClient &client, Color &begin, Color &end) {
 		if (begin.red() < end.red() && _current.red() < end.red()) {
 			debugLineViaSerial("increase red");
-			return client.increaseAndSlideColor(1, 0, 0, _current);
+			return increaseAndSlideColor(client, _current, 1, 0, 0);
 		}
 		if (begin.red() > end.red() && _current.red() > end.red()) {
 			debugLineViaSerial("decrease red");
-			return client.decreaseAndSlideColor(1, 0, 0, _current);
+			return decreaseAndSlideColor(client, _current, 1, 0, 0);
 		}
 		// if equal => nothing to do
 		debugLineViaSerial("red matches");
@@ -270,11 +252,11 @@ private:
 	int slideGreen(ColorSliderClient &client, Color &begin, Color &end) {
 		if (begin.green() < end.green() && _current.green() < end.green()) {
 			debugLineViaSerial("increase green");
-			return client.increaseAndSlideColor(0, 1, 0, _current);
+			return increaseAndSlideColor(client, _current, 0, 1, 0);
 		}
 		if (begin.green() > end.green() && _current.green() > end.green()) {
 			debugLineViaSerial("decrease green");
-			return client.decreaseAndSlideColor(0, 1, 0, _current);
+			return decreaseAndSlideColor(client, _current, 0, 1, 0);
 		}
 		// if equal => nothing to do
 		debugLineViaSerial("green matches");
@@ -284,15 +266,29 @@ private:
 	int slideBlue(ColorSliderClient &client, Color &begin, Color &end) {
 		if (begin.blue() < end.blue() && _current.blue() < end.blue()) {
 			debugLineViaSerial("increase blue");
-			return client.increaseAndSlideColor(0, 0, 1, _current);
+			return increaseAndSlideColor(client, _current, 0, 0, 1);
 		}
 		if (begin.blue() > end.blue() && _current.blue() > end.blue()) {
 			debugLineViaSerial("decrease blue");
-			return client.decreaseAndSlideColor(0, 0, 1, _current);
+			return decreaseAndSlideColor(client, _current, 0, 0, 1);
 		}
 		// if equal => nothing to do
 		debugLineViaSerial("blue matches");
 		return 0;
+	}
+
+	int increaseAndSlideColor(ColorSliderClient &client, Color &color, //
+			unsigned char r, unsigned char g, unsigned char b) {
+		color.increase(r, g, b);
+		client.slideColor(color);
+		return 1;
+	}
+
+	int decreaseAndSlideColor(ColorSliderClient &client, Color &color, //
+			unsigned char r, unsigned char g, unsigned char b) {
+		color.decrease(r, g, b);
+		client.slideColor(color);
+		return 1;
 	}
 
 };
