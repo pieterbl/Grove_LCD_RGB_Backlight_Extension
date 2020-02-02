@@ -26,6 +26,7 @@
 #define __GROVE_LCD_RGB_BACKLIGHT_EXTENSION_HPP__
 
 #include <Arduino.h>
+#include "rgb_lcd.h"
 
 /*
  * Simple Color class.
@@ -289,6 +290,50 @@ private:
 		color.decrease(r, g, b);
 		client.slideColor(color);
 		return 1;
+	}
+
+};
+
+class GroveLcdRgbBacklight: public rgb_lcd, public ColorSliderClient {
+private:
+	uint8_t _cols;
+	uint8_t _lines;
+
+public:
+
+	GroveLcdRgbBacklight(uint8_t cols, uint8_t lines) :
+			_cols(cols), _lines(lines) {
+	}
+
+	virtual ~GroveLcdRgbBacklight() {
+	}
+
+	void initialize() {
+		rgb_lcd::begin(_cols, _lines);
+	}
+
+	void setBackgroundColor(const Color &color) {
+		rgb_lcd::setRGB(color.red(), color.green(), color.blue());
+	}
+
+	virtual void slideColor(const Color &color) {
+		setBackgroundColor(color);
+	}
+
+	void setBackgroundColorRed() {
+		setBackgroundColor(Colors::Red);
+	}
+
+	void setBackgroundColorGreen() {
+		setBackgroundColor(Colors::Green);
+	}
+
+	void setBackgroundColorBlue() {
+		setBackgroundColor(Colors::Blue);
+	}
+
+	void setBackgroundColorMagenta() {
+		setBackgroundColor(Colors::Magenta);
 	}
 
 };
