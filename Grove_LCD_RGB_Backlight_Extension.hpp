@@ -368,6 +368,16 @@ public:
 		setBackgroundColor(Colors::Magenta);
 	}
 
+	void printAt(uint8_t col, uint8_t row, String &str) {
+		rgb_lcd::setCursor(col, row);
+		rgb_lcd::print(str);
+	}
+
+	void printAt(uint8_t col, uint8_t row, const char *str) {
+		rgb_lcd::setCursor(col, row);
+		rgb_lcd::print(str);
+	}
+
 };
 
 #endif
