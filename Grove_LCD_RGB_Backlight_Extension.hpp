@@ -149,12 +149,12 @@ public:
 	}
 
 	// basically no sliding, all colors the same
-	ColorSlider(Color init) :
+	ColorSlider(const Color &init) :
 			_from(init), _to(init), _current(init) {
 	}
 
 	// initialize for continuous sliding
-	ColorSlider(Color from, Color to) :
+	ColorSlider(const Color &from, const Color &to) :
 			_from(from), _to(to), _current(from) {
 	}
 
@@ -170,13 +170,13 @@ public:
 			slide(client);
 			delay(msStepSize);
 		}
-
 	}
 
 	/*
 	 * slideFromTo, with delays of "msStepSize".
 	 */
-	void slideFromTo(ColorSliderClient &client, Color from, Color to,
+	void slideFromTo(ColorSliderClient &client, //
+			const Color &from, const Color &to, //
 			unsigned long msStepSize = 10) {
 
 		initializeColors(from, to);
@@ -262,7 +262,9 @@ private:
 		return 0;
 	}
 
-	int slideRed(ColorSliderClient &client, Color &begin, Color &end) {
+	int slideRed(ColorSliderClient &client, //
+			const Color &begin, const Color &end) {
+
 		if (begin.red() < end.red() && _current.red() < end.red()) {
 			debugLineViaSerial("increase red");
 			return increaseAndSlideColor(client, _current, 1, 0, 0);
@@ -276,7 +278,9 @@ private:
 		return 0;
 	}
 
-	int slideGreen(ColorSliderClient &client, Color &begin, Color &end) {
+	int slideGreen(ColorSliderClient &client, //
+			const Color &begin, const Color &end) {
+
 		if (begin.green() < end.green() && _current.green() < end.green()) {
 			debugLineViaSerial("increase green");
 			return increaseAndSlideColor(client, _current, 0, 1, 0);
@@ -290,7 +294,9 @@ private:
 		return 0;
 	}
 
-	int slideBlue(ColorSliderClient &client, Color &begin, Color &end) {
+	int slideBlue(ColorSliderClient &client, //
+			const Color &begin, const Color &end) {
+
 		if (begin.blue() < end.blue() && _current.blue() < end.blue()) {
 			debugLineViaSerial("increase blue");
 			return increaseAndSlideColor(client, _current, 0, 0, 1);
@@ -318,7 +324,7 @@ private:
 		return 1;
 	}
 
-	void initializeColors(Color from, Color to) {
+	void initializeColors(const Color &from, const Color &to) {
 		_from = from;
 		_to = to;
 		_current = from;
@@ -368,7 +374,7 @@ public:
 		setBackgroundColor(Colors::Magenta);
 	}
 
-	void printAt(uint8_t col, uint8_t row, String &str) {
+	void printAt(uint8_t col, uint8_t row, const String &str) {
 		rgb_lcd::setCursor(col, row);
 		rgb_lcd::print(str);
 	}
