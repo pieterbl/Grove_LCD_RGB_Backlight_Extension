@@ -26,8 +26,8 @@ PHOTO: TBD
 # Provided Examples
 | Example | Description |
 | ------- | ----------- |
-| [DebugSlider](./examples/DebugSlider.ino)               | Illustrates how to debug the ColorSlider on a "short" color range. |
-| [DisplayTextRGB](./examples/DisplayTextRGB.ino)         | Illustrates how to set the RGB display color to red, to green, to blue, for-ever. |
-| [SlideFromToForEver](./examples/SlideFromToForEver.ino) | Illustrates how to "slide" the RGB display color from blue to red, to blue to red, for-ever, while printing timer information. |
-| [SlideRGB](./examples/SlideRGB.ino)                     | Illustrates how to "slide" the RGB display color from red to green, from green to blue, from blue to red, for-ever. |
-| [SlideToBlue](./examples/SlideToBlue.ino)               | Illustrates how to "slide" the RGB display color from green to blue. |
+| [DebugSlider](./examples/DebugSlider/DebugSlider.ino)                      | Illustrates how to debug the ColorSlider on a "short" color range. |
+| [DisplayTextRGB](./examples/DisplayTextRGB/DisplayTextRGB.ino)             | Illustrates how to set the RGB display color to red, to green, to blue, for-ever. |
+| [SlideFromToForEver](./examples/SlideFromToForEver/SlideFromToForEver.ino) | Illustrates how to "slide" the RGB display color from blue to red, to blue to red, for-ever, while printing timer information. |
+| [SlideRGB](./examples/SlideRGB/SlideRGB.ino)                               | Illustrates how to "slide" the RGB display color from red to green, from green to blue, from blue to red, for-ever. |
+| [SlideToBlue](./examples/SlideToBlue/SlideToBlue.ino)                      | Illustrates how to "slide" the RGB display color from green to blue. |
