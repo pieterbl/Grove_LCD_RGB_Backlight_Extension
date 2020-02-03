@@ -34,19 +34,16 @@ void setup() {
 
 void loop() {
 
-	rgbLcd.setCursor(0, 0);
 	rgbLcd.setBackgroundColorRed();
-	rgbLcd.print("Red  "); // add spaces, to prevent expensive clear operation
+	rgbLcd.printAt(0, 0, "Red  "); // add spaces, to prevent expensive clear operation
 	delay(2000);
 
-	rgbLcd.setCursor(0, 0);
 	rgbLcd.setBackgroundColorGreen();
-	rgbLcd.print("Green");
+	rgbLcd.printAt(0, 0, "Green");
 	delay(2000);
 
-	rgbLcd.setCursor(0, 0);
 	rgbLcd.setBackgroundColorBlue();
-	rgbLcd.print("Blue "); // add spaces, to prevent expensive clear operation
+	rgbLcd.printAt(0, 0, "Blue "); // add spaces, to prevent expensive clear operation
 	delay(2000);
 }
 
