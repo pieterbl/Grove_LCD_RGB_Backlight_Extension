@@ -142,6 +142,18 @@ private:
 	bool _debugViaSerial = false;
 
 public:
+
+	// default color is Green
+	ColorSlider() :
+			_from(Colors::Green), _to(Colors::Green), _current(Colors::Green) {
+	}
+
+	// basically no sliding, all colors the same
+	ColorSlider(Color init) :
+			_from(init), _to(init), _current(init) {
+	}
+
+	// initialize for continuous sliding
 	ColorSlider(Color from, Color to) :
 			_from(from), _to(to), _current(from) {
 	}
@@ -159,6 +171,18 @@ public:
 			delay(msStepSize);
 		}
 
+	}
+
+	/*
+	 * slideFromTo, with delays of "msStepSize".
+	 */
+	void slideFromTo(ColorSliderClient &client, Color from, Color to,
+			unsigned long msStepSize = 10) {
+
+		initializeColors(from, to);
+		while (slideUp(client) == 1) {
+			delay(msStepSize);
+		}
 	}
 
 	void slide(ColorSliderClient &client) {
@@ -205,35 +229,37 @@ private:
 	/*
 	 * Going up, we slide: Red, Green, Blue.
 	 */
-	void slideUp(ColorSliderClient &client) {
+	int slideUp(ColorSliderClient &client) {
 		debugViaSerial();
 		if (slideRed(client, _from, _to)) {
-			return;
+			return 1;
 		}
 		if (slideGreen(client, _from, _to)) {
-			return;
+			return 1;
 		}
 		if (slideBlue(client, _from, _to)) {
-			return;
+			return 1;
 		}
 		reverseDirection();
+		return 0;
 	}
 
 	/*
 	 * Going down, we slide: Blue, Green, Red.
 	 */
-	void slideDown(ColorSliderClient &client) {
+	int slideDown(ColorSliderClient &client) {
 		debugViaSerial();
 		if (slideBlue(client, _to, _from)) {
-			return;
+			return 1;
 		}
 		if (slideGreen(client, _to, _from)) {
-			return;
+			return 1;
 		}
 		if (slideRed(client, _to, _from)) {
-			return;
+			return 1;
 		}
 		reverseDirection();
+		return 0;
 	}
 
 	int slideRed(ColorSliderClient &client, Color &begin, Color &end) {
@@ -290,6 +316,12 @@ private:
 		color.decrease(r, g, b);
 		client.slideColor(color);
 		return 1;
+	}
+
+	void initializeColors(Color from, Color to) {
+		_from = from;
+		_to = to;
+		_current = from;
 	}
 
 };
