@@ -7,6 +7,12 @@ License information can be found [here](./LICENSE.md).
 # Development
 For developent I use the Sloeber IDE (<https://eclipse.baeyens.it>).
 
+# Hardware
+I am using the Grove - LCD RGB Backlight, in combination with:
+- [Arduino UNO R3](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-2995.html) (Mine says UNO R3, from arduino.org)
+- [Grove Base Shield V2.0 for Arduino](https://www.seeedstudio.com/Base-Shield-V2.html) (I have version 2.1)
+- [Grove - LCD RGB Backlight](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight.html) (I have version 4.0)
+
 # Required Libraries
 This library requires:
 - <https://github.com/pieterbl/Grove_LCD_RGB_Backlight>
