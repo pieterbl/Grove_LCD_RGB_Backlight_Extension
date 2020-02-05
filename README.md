@@ -47,9 +47,10 @@ See [Base-Shield-V2.html](https://www.seeedstudio.com/Base-Shield-V2.html), stat
 
 | Example | Description |
 | ------- | ----------- |
-| [DebugSlideBlueOnly](./examples/DebugSlideBlueOnly/DebugSlideBlueOnly.ino) | Illustrates how the slider behaves if "to" and "from" color have the same value. |
-| [DebugSlider](./examples/DebugSlider/DebugSlider.ino)                      | Illustrates how to debug the ColorSlider on a "short" color range. |
+| [DebugSlideBlueOnly](./examples/DebugSlideBlueOnly/DebugSlideBlueOnly.ino) | Illustrates how the slider behaves if "to" and "from" color have the same value. Very much like DebugSlider. |
+| [DebugSlider](./examples/DebugSlider/DebugSlider.ino)                      | Illustrates how to debug the ColorSlider on a "short" color range. Very much like DebugSlideBlueOnly. |
 | [DisplayTextRGB](./examples/DisplayTextRGB/DisplayTextRGB.ino)             | Illustrates how to set the RGB display color to red, to green, to blue, for-ever. |
-| [SlideFromToForEver](./examples/SlideFromToForEver/SlideFromToForEver.ino) | Illustrates how to "slide" the RGB display color from blue to red, to blue to red, for-ever, while printing timer information. |
+| [SlideFromOrangeToMagenta](./examples/SlideFromOrangeToMagenta/SlideFromOrangeToMagenta.ino) | Illustrates how to "slide" the RGB display color from orange to magenta, to orange to magenta, for-ever, while printing timer information. Very much like SlideFromToForEver. |
+| [SlideFromToForEver](./examples/SlideFromToForEver/SlideFromToForEver.ino) | Illustrates how to "slide" the RGB display color from blue to red, to blue to red, for-ever, while printing timer information. Very much like SlideFromOrangeToMagenta.|
 | [SlideRGB](./examples/SlideRGB/SlideRGB.ino)                               | Illustrates how to "slide" the RGB display color from red to green, from green to blue, from blue to red, for-ever. |
-| [SlideToBlue](./examples/SlideToBlue/SlideToBlue.ino)                      | Illustrates how to "slide" the RGB display color from green to blue. |
+| [SlideToBlue](./examples/SlideToBlue/SlideToBlue.ino)                      | Illustrates how to "slide" the RGB display color from green to blue, only once. |
