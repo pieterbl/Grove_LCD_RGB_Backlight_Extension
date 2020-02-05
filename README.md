@@ -12,9 +12,9 @@ Following hardware was used for this project:
 
 - [Arduino UNO R3](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-2995.html) (my board says UNO R3, from arduino.org)
 - [Grove Base Shield V2.0 for Arduino](http://wiki.seeedstudio.com/Base_Shield_V2/) (using version 2.1)
--- see also: <https://www.seeedstudio.com/Base-Shield-V2.html>
+  - see also: <https://www.seeedstudio.com/Base-Shield-V2.html>
 - [Grove - LCD RGB Backlight](http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/) (using version 4.0)
--- see also: <https://www.seeedstudio.com/Grove-LCD-RGB-Backlight.html>
+  - see also: <https://www.seeedstudio.com/Grove-LCD-RGB-Backlight.html>
 
 # Required Libraries
 This library requires:
