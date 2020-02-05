@@ -124,6 +124,8 @@ public:
 	virtual ~ColorSliderClient() {
 	}
 
+	virtual void setBackgroundColor(const Color &color) = 0;
+
 	virtual void slideColor(const Color &color) = 0;
 };
 
@@ -168,6 +170,10 @@ public:
 	void delayAndSlide(ColorSliderClient &client, unsigned long ms,
 			unsigned long msStepSize = 10) {
 
+		// must set color here, otherwise in case of "to" and "from" color equal,
+		// we will never "set" or "slide"
+		client.setBackgroundColor(_current);
+
 		for (unsigned long i = 0; i < ms; i += msStepSize) {
 			slide(client);
 			delay(msStepSize);
@@ -182,19 +188,13 @@ public:
 			unsigned long msStepSize = 10) {
 
 		initializeColors(from, to);
+
+		// must set color here, otherwise in case of "to" and "from" color equal,
+		// we will never "set" or "slide"
+		client.setBackgroundColor(_current);
+
 		while (slideUp(client) == 1) {
 			delay(msStepSize);
-		}
-	}
-
-	void slide(ColorSliderClient &client) {
-		if (_direction == 1) {
-			slideUp(client);
-			return;
-		}
-		if (_direction == -1) {
-			slideDown(client);
-			return;
 		}
 	}
 
@@ -226,6 +226,17 @@ private:
 
 	inline void reverseDirection() {
 		_direction *= -1;
+	}
+
+	void slide(ColorSliderClient &client) {
+		if (_direction == 1) {
+			slideUp(client);
+			return;
+		}
+		if (_direction == -1) {
+			slideDown(client);
+			return;
+		}
 	}
 
 	/*
@@ -352,7 +363,7 @@ public:
 		rgb_lcd::begin(_cols, _lines);
 	}
 
-	void setBackgroundColor(const Color &color) {
+	virtual void setBackgroundColor(const Color &color) {
 		rgb_lcd::setRGB(color.red(), color.green(), color.blue());
 	}
 
