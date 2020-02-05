@@ -37,7 +37,7 @@ This library requires:
 
 ## The "Grove - LCD RGB Backlight" - Needs 5V
 
-See [Grove Base Shield V2.0 for Arduino](https://www.seeedstudio.com/Base-Shield-V2.html) documentation, stating:
+See [Base-Shield-V2.html](https://www.seeedstudio.com/Base-Shield-V2.html), stating:
 
 - Every Grove connector has four wires, one of which is the VCC. However, not every micro-controller main board needs a supply voltage of 5V, some boards only need 3.3V.
 - That's why we add a power toggle switch to Base Shield V2 so that you can select the suitable voltage of the micro-controller main board you are using via this switch.
@@ -47,6 +47,7 @@ See [Grove Base Shield V2.0 for Arduino](https://www.seeedstudio.com/Base-Shield
 
 | Example | Description |
 | ------- | ----------- |
+| [DebugSlideBlueOnly](./examples/DebugSlideBlueOnly/DebugSlideBlueOnly.ino) | Illustrates how the slider behaves if "to" and "from" color have the same value. |
 | [DebugSlider](./examples/DebugSlider/DebugSlider.ino)                      | Illustrates how to debug the ColorSlider on a "short" color range. |
 | [DisplayTextRGB](./examples/DisplayTextRGB/DisplayTextRGB.ino)             | Illustrates how to set the RGB display color to red, to green, to blue, for-ever. |
 | [SlideFromToForEver](./examples/SlideFromToForEver/SlideFromToForEver.ino) | Illustrates how to "slide" the RGB display color from blue to red, to blue to red, for-ever, while printing timer information. |
