@@ -1,13 +1,20 @@
 # Grove\_LCD\_RGB\_Backlight\_Extension
+
 Extension for: Seeedstudio, Grove - LCD RGB Backlight
 
-# License
+## License
+
 License information can be found [here](./LICENSE.md).
 
-# Development
-For development the Sloeber IDE was used (<https://eclipse.baeyens.it>).
+## Development
 
-# Hardware
+- For Arduino/C++ development **Sloeber** was used (<https://eclipse.baeyens.it>).
+- For Markdown editing Visual Studio Code was used, with following plug-ins for:
+  - Language checking: **Code Spell Checker**
+  - Style checking: **Markdown All in One**, and **markdownlint**
+
+## Hardware
+
 Following hardware was used for this project:
 
 - [Arduino UNO R3](https://www.seeedstudio.com/Arduino-Uno-Rev3-p-2995.html) (my board says UNO R3, from arduino.org)
@@ -16,7 +23,8 @@ Following hardware was used for this project:
 - [Grove - LCD RGB Backlight](http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/) (using version 4.0)
   - see also: <https://www.seeedstudio.com/Grove-LCD-RGB-Backlight.html>
 
-# Required Libraries
+## Required Libraries
+
 This library requires:
 
 - <https://github.com/pieterbl/Grove_LCD_RGB_Backlight>
@@ -27,7 +35,7 @@ This library requires:
 - Standard Arduino "Wire" library
   - \<Wire.h\> is required by "rgb\_lcd.cpp" from the Grove\_LCD\_RGB\_Backlight library
 
-# The "Grove - LCD RGB Backlight" - Needs 5V
+## The "Grove - LCD RGB Backlight" - Needs 5V
 
 See [Grove Base Shield V2.0 for Arduino](https://www.seeedstudio.com/Base-Shield-V2.html) documentation, stating:
 
@@ -35,7 +43,8 @@ See [Grove Base Shield V2.0 for Arduino](https://www.seeedstudio.com/Base-Shield
 - That's why we add a power toggle switch to Base Shield V2 so that you can select the suitable voltage of the micro-controller main board you are using via this switch.
 - For example, **if you are using Arduino UNO with Base Shield V2, please turn the switch to 5V position;** while using Seeeduino Arch with Base Shield V2, please turn the switch to 3.3V.
 
-# Provided Examples
+## Provided Examples
+
 | Example | Description |
 | ------- | ----------- |
 | [DebugSlider](./examples/DebugSlider/DebugSlider.ino)                      | Illustrates how to debug the ColorSlider on a "short" color range. |
