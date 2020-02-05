@@ -1,4 +1,6 @@
 /*
+ MIT License
+
  Copyright (c) 2020 Pieter Bloemendaal (https://github.com/pieterbl)
 
  Project Grove_LCD_RGB_Backlight_Extension
