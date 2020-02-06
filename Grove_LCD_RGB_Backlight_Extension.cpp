@@ -39,3 +39,6 @@ const Color Colors::Magenta(255, 0, 255);
 // https://rgbcolorcode.com/color/orange
 const Color Colors::Orange(255, 165, 0);
 const Color Colors::ORANJE(255, 165, 0);
+
+// https://rgbcolorcode.com/color/yellow
+const Color Colors::Yellow(255, 255, 0);

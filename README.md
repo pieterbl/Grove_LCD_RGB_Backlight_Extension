@@ -54,3 +54,14 @@ See [Base-Shield-V2.html](https://www.seeedstudio.com/Base-Shield-V2.html), stat
 | [SlideFromToForEver](./examples/SlideFromToForEver/SlideFromToForEver.ino) | Illustrates how to "slide" the RGB display color from blue to red, to blue to red, for-ever, while printing timer information. Very much like SlideFromOrangeToMagenta.|
 | [SlideRGB](./examples/SlideRGB/SlideRGB.ino)                               | Illustrates how to "slide" the RGB display color from red to green, from green to blue, from blue to red, for-ever. |
 | [SlideToBlue](./examples/SlideToBlue/SlideToBlue.ino)                      | Illustrates how to "slide" the RGB display color from green to blue, only once. |
+
+## Colors
+
+If you want some inspiration for interesting colors, you may want to go here <http://rgbcolorcode.com/>. It has everything you need, e.g.
+
+| Color Name | Color Pointer |
+| ---------- | ------------- |
+| Acid Green aka Android Green | <https://rgbcolorcode.com/color/acid-green> |
+| Alien Armpit aka Lawn Green | <https://rgbcolorcode.com/color/alien-armpit> |
+| Blizzard Blue | <https://rgbcolorcode.com/color/blizzard-blue> |
+| Electric Yellow | <https://rgbcolorcode.com/color/electric-yellow> |

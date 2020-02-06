@@ -108,6 +108,7 @@ public:
 	static const Color Magenta;
 	static const Color Orange;
 	static const Color ORANJE; // for all the Dutch folks out there ...
+	static const Color Yellow;
 
 private:
 	Colors() {
