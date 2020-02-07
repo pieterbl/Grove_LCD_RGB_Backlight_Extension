@@ -1,6 +1,7 @@
 # Grove\_LCD\_RGB\_Backlight\_Extension
 
 Extension for: Seeedstudio, Grove - LCD RGB Backlight
+(Grove\_LCD\_RGB\_Backlight, see [Required Libraries](#required-libraries) below).
 
 ## License
 
