@@ -362,6 +362,11 @@ public:
 	virtual ~GroveLcdRgbBacklight() {
 	}
 
+	// C++ compiler with Sloeber V4.3.2 complains that this pure virtual method
+	// must be implemented by class GroveLcdRgbBacklight. This is strange, since
+	// the write method is already implemented by class rgb_lcd.
+	virtual size_t write(uint8_t value);
+
 	void initialize() {
 		rgb_lcd::begin(_cols, _lines);
 	}

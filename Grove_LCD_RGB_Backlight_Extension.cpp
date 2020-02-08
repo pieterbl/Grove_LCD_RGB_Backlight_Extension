@@ -42,3 +42,11 @@ const Color Colors::ORANJE(255, 165, 0);
 
 // https://rgbcolorcode.com/color/yellow
 const Color Colors::Yellow(255, 255, 0);
+
+// C++ compiler with Sloeber V4.3.2 complains that this pure virtual method
+// must be implemented by class GroveLcdRgbBacklight. This is strange, since
+// the write method is already implemented by class rgb_lcd.
+inline size_t GroveLcdRgbBacklight::write(uint8_t value) {
+	return rgb_lcd::write(value);
+}
+
