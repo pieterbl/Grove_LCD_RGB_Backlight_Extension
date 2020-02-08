@@ -1,7 +1,11 @@
 # Grove\_LCD\_RGB\_Backlight\_Extension
 
-Extension for: Seeedstudio, Grove - LCD RGB Backlight
+Extension for: Seeedstudio, Grove - LCD RGB Backlight library
 (Grove\_LCD\_RGB\_Backlight, see [Required Libraries](#required-libraries) below).
+
+## Purpose
+
+This library was developed as a convenience wrapper for the Grove - LCD RGB Backlight library, and for usage in this GitHub [Grove LCD RGB Clock](https://github.com/pieterbl/Grove_LCD_RGB_Clock) project.
 
 ## License
 
