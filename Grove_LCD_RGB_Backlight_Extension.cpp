@@ -46,7 +46,10 @@ const Color Colors::Yellow(255, 255, 0);
 // C++ compiler with Sloeber V4.3.2 complains that this pure virtual method
 // must be implemented by class GroveLcdRgbBacklight. This is strange, since
 // the write method is already implemented by class rgb_lcd.
+//
+// having this method, checked correct signature several times,
+// does not seem to solve the compiler warning ...
+//
 inline size_t GroveLcdRgbBacklight::write(uint8_t value) {
 	return rgb_lcd::write(value);
 }
-

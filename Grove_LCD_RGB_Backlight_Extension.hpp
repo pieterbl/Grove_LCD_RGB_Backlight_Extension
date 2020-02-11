@@ -365,6 +365,10 @@ public:
 	// C++ compiler with Sloeber V4.3.2 complains that this pure virtual method
 	// must be implemented by class GroveLcdRgbBacklight. This is strange, since
 	// the write method is already implemented by class rgb_lcd.
+	//
+	// having this method, checked correct signature several times,
+	// does not seem to solve the compiler warning ...
+	//
 	virtual size_t write(uint8_t value);
 
 	void initialize() {
